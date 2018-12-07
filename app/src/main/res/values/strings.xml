@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Swapi</string>
+    <string name="loading_error_msg">Oops, your connection seems off&#8230;</string>
+    <string name="detail_about_section">About</string>
+    <string name="detail_films_section">Films</string>
+    <string name="detail_species_section">Species</string>
+    <string name="detail_vehicles_section">Vehicles</string>
+    <string name="detail_starships_section">Starships</string>
+    <string name="detail_cm">cm</string>
+    <string name="detail_kg">kg</string>
+    <string name="detail_hair">hair</string>
+    <string name="detail_skin">skin</string>
+    <string name="detail_eyes">eyes</string>
+    <string name="detail_birth">born on</string>
+    <string name="detail_home">From</string>
+</resources>
