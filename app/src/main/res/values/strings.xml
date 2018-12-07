@@ -13,4 +13,6 @@
     <string name="detail_eyes">eyes</string>
     <string name="detail_birth">born on</string>
     <string name="detail_home">From</string>
+    <string name="detail_about">%1$s cm, %2$s kg, %3$s hair, %4$s skin, %5$s eyes, born on %6$s and %7$s gender</string>
+    <string name="search_hint">Search characters</string>
 </resources>

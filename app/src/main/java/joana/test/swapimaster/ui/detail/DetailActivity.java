@@ -29,6 +29,9 @@ public class DetailActivity extends AppCompatActivity {
         mViewModel = ViewModelProviders.of(this).get(DetailViewModel.class);
         mPersonId = getIntent().getStringExtra(EXTRA_ID);
         mViewModel.loadPerson(mPersonId);
+        // Specify the current activity as the lifecycle owner.
+        activityDetailBinding.setLifecycleOwner(this);
+
         activityDetailBinding.setViewmodel(mViewModel);
         initToolbar();
     }

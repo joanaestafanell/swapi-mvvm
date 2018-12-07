@@ -34,12 +34,29 @@
                     app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
                 <FrameLayout
+                        android:background="@drawable/f_gradient"
+                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_collapseMode="parallax"
+                        android:fitsSystemWindows="true"
+                        android:visibility="@{ viewmodel.person.gender.startsWith(`f`) ? View.VISIBLE : View.GONE}"/>
+                <FrameLayout
+                        android:background="@drawable/m_gradient"
+                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_collapseMode="parallax"
+                        android:fitsSystemWindows="true"
+                        android:visibility="@{ viewmodel.person.gender.startsWith(`m`) ? View.VISIBLE : View.GONE}"/>
+                <FrameLayout
                         android:background="@drawable/u_gradient"
                         app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:layout_collapseMode="parallax"
-                        android:fitsSystemWindows="true"/>
+                        android:fitsSystemWindows="true"
+                        android:visibility="@{ viewmodel.person.gender.startsWith(`n`) || viewmodel.person.gender.startsWith(`h`) ? View.VISIBLE : View.GONE}"/>
 
                 <android.support.v7.widget.Toolbar
                         android:id="@+id/toolbar"
@@ -71,6 +88,11 @@
                         style="@style/CustomText.title.detail"
                         android:padding="8dp"
                         android:text="@string/detail_about_section"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/CustomText.detail"
+                        android:text="@{@string/detail_about(viewmodel.person.height, viewmodel.person.mass, viewmodel.person.hairColor, viewmodel.person.skinColor, viewmodel.person.eyeColor, viewmodel.person.birthYear, viewmodel.person.gender)}"/>
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -78,6 +100,7 @@
                         style="@style/CustomText.title.detail"
                         android:padding="8dp"
                         android:text="@string/detail_films_section"/>
+
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
