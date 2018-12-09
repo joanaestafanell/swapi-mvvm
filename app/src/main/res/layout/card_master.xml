@@ -8,8 +8,8 @@
                 name="viewmodel"
                 type="joana.test.swapimaster.ui.master.MasterViewModel"/>
         <variable
-                name="person"
-                type="joana.test.swapimaster.data.model.Person"/>
+                name="character"
+                type="joana.test.swapimaster.data.model.Character"/>
     </data>
 
     <android.support.v7.widget.CardView
@@ -22,7 +22,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp"
-            android:onClick="@{()->viewmodel.showDetails(person.name)}">
+            android:onClick="@{()->viewmodel.showDetails(character.name)}">
 
         <LinearLayout
                 android:id="@+id/layout"
@@ -48,7 +48,7 @@
                     android:gravity="center_vertical"
                     android:padding="@dimen/master_card_padding"
                     android:layout_weight="1"
-                    android:text="@{person.name}"/>
+                    android:text="@{character.name}"/>
 
             <FrameLayout
                     android:id="@+id/female_frame"
@@ -56,21 +56,21 @@
                     android:layout_height="match_parent"
                     android:gravity="end"
                     android:background="@drawable/f_gradient"
-                    android:visibility="@{ person.gender.startsWith(`f`) ? View.VISIBLE : View.GONE}"/>
+                    android:visibility="@{ character.gender.startsWith(`f`) ? View.VISIBLE : View.GONE}"/>
             <FrameLayout
                     android:id="@+id/male_frame"
                     android:layout_width="@dimen/master_card_gender_size"
                     android:layout_height="match_parent"
                     android:gravity="end"
                     android:background="@drawable/m_gradient"
-                    android:visibility="@{ person.gender.startsWith(`m`) ? View.VISIBLE : View.GONE}"/>
+                    android:visibility="@{ character.gender.startsWith(`m`) ? View.VISIBLE : View.GONE}"/>
             <FrameLayout
                     android:id="@+id/unknown_frame"
                     android:layout_width="@dimen/master_card_gender_size"
                     android:layout_height="match_parent"
                     android:gravity="end"
                     android:background="@drawable/u_gradient"
-                    android:visibility="@{ person.gender.startsWith(`n`) || person.gender.startsWith(`h`) ? View.VISIBLE : View.GONE}"/>
+                    android:visibility="@{ character.gender.startsWith(`n`) || character.gender.startsWith(`h`) ? View.VISIBLE : View.GONE}"/>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>

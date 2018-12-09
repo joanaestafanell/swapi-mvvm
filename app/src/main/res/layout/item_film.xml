@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+                name="film"
+                type="joana.test.swapimaster.data.model.Film"/>
+    </data>
+    <TextView
+            style="@style/CustomText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/title_film(film.episodeId, film.title)}"/>
+
+</layout>

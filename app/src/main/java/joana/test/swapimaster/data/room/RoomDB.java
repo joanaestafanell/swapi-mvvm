@@ -4,10 +4,10 @@ import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-import joana.test.swapimaster.data.model.Person;
-import joana.test.swapimaster.data.room.model.PersonDao;
+import joana.test.swapimaster.data.model.Character;
+import joana.test.swapimaster.data.room.model.CharacterDao;
 
-@Database(entities = {Person.class}, version = 1, exportSchema = false)
+@Database(entities = {Character.class}, version = 2, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
 
     private static volatile RoomDB INSTANCE;
@@ -26,6 +26,5 @@ public abstract class RoomDB extends RoomDatabase {
         return INSTANCE;
     }
 
-    public abstract PersonDao personDao();
-
+    public abstract CharacterDao peopleDao();
 }

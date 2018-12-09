@@ -2,7 +2,6 @@ package joana.test.swapimaster.data.model;
 
 import java.util.List;
 
-import android.arch.persistence.room.Entity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,7 +18,7 @@ public class People {
     private Object previous;
     @SerializedName("results")
     @Expose
-    private List<Person> results = null;
+    private List<Character> results = null;
 
     public Integer getCount() {
         return count;
@@ -45,11 +44,11 @@ public class People {
         this.previous = previous;
     }
 
-    public List<Person> getResults() {
+    public List<Character> getResults() {
         return results;
     }
 
-    public void setResults(List<Person> results) {
+    public void setResults(List<Character> results) {
         this.results = results;
     }
 

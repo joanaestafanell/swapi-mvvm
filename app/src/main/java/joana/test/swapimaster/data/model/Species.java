@@ -59,24 +59,6 @@ public class Species {
     @Expose
     private String url;
 
-    public Species(String name, String classification, String designation, String averageHeight, String skinColors, String hairColors, String eyeColors, String averageLifespan, String homeworld, String language, List<String> people, List<String> films, String created, String edited, String url) {
-        this.name = name;
-        this.classification = classification;
-        this.designation = designation;
-        this.averageHeight = averageHeight;
-        this.skinColors = skinColors;
-        this.hairColors = hairColors;
-        this.eyeColors = eyeColors;
-        this.averageLifespan = averageLifespan;
-        this.homeworld = homeworld;
-        this.language = language;
-        this.people = people;
-        this.films = films;
-        this.created = created;
-        this.edited = edited;
-        this.url = url;
-    }
-
     public String getName() {
         return name;
     }

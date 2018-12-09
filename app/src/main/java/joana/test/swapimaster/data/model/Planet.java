@@ -9,8 +9,6 @@ import com.google.gson.annotations.SerializedName;
 
 @Entity(tableName = "planets_table")
 public class Planet {
-    @PrimaryKey(autoGenerate = true)
-    public long id;
 
     @SerializedName("name")
     @Expose
@@ -54,23 +52,6 @@ public class Planet {
     @SerializedName("url")
     @Expose
     private String url;
-
-    public Planet(String name, String rotationPeriod, String orbitalPeriod, String diameter, String climate, String gravity, String terrain, String surfaceWater, String population, List<Object> residents, List<String> films, String created, String edited, String url) {
-        this.name = name;
-        this.rotationPeriod = rotationPeriod;
-        this.orbitalPeriod = orbitalPeriod;
-        this.diameter = diameter;
-        this.climate = climate;
-        this.gravity = gravity;
-        this.terrain = terrain;
-        this.surfaceWater = surfaceWater;
-        this.population = population;
-        this.residents = residents;
-        this.films = films;
-        this.created = created;
-        this.edited = edited;
-        this.url = url;
-    }
 
     public String getName() {
         return name;

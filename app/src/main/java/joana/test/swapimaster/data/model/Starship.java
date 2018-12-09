@@ -10,9 +10,6 @@ import com.google.gson.annotations.SerializedName;
 @Entity(tableName = "starships_table")
 public class Starship {
 
-    @PrimaryKey(autoGenerate = true)
-    public long id;
-
     @SerializedName("name")
     @Expose
     private String name;
@@ -67,27 +64,6 @@ public class Starship {
     @SerializedName("url")
     @Expose
     private String url;
-
-    public Starship(String name, String model, String manufacturer, String costInCredits, String length, String maxAtmospheringSpeed, String crew, String passengers, String cargoCapacity, String consumables, String hyperdriveRating, String mGLT, String starshipClass, List<Object> pilots, List<String> films, String created, String edited, String url) {
-        this.name = name;
-        this.model = model;
-        this.manufacturer = manufacturer;
-        this.costInCredits = costInCredits;
-        this.length = length;
-        this.maxAtmospheringSpeed = maxAtmospheringSpeed;
-        this.crew = crew;
-        this.passengers = passengers;
-        this.cargoCapacity = cargoCapacity;
-        this.consumables = consumables;
-        this.hyperdriveRating = hyperdriveRating;
-        this.mGLT = mGLT;
-        this.starshipClass = starshipClass;
-        this.pilots = pilots;
-        this.films = films;
-        this.created = created;
-        this.edited = edited;
-        this.url = url;
-    }
 
     public String getName() {
         return name;

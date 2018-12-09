@@ -2,17 +2,13 @@ package joana.test.swapimaster.data.model;
 
 import java.util.List;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
+import android.databinding.BaseObservable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import joana.test.swapimaster.util.StringListConverter;
 
-@Entity(tableName = "films_table")
-public class Film {
-
-    @PrimaryKey(autoGenerate = true)
-    public long id;
-
+public class Film extends BaseObservable {
     @SerializedName("title")
     @Expose
     private String title;
@@ -33,18 +29,23 @@ public class Film {
     private String releaseDate;
     @SerializedName("characters")
     @Expose
+    @TypeConverters(StringListConverter.class)
     private List<String> characters = null;
     @SerializedName("planets")
     @Expose
+    @TypeConverters(StringListConverter.class)
     private List<String> planets = null;
     @SerializedName("starships")
     @Expose
+    @TypeConverters(StringListConverter.class)
     private List<String> starships = null;
     @SerializedName("vehicles")
     @Expose
+    @TypeConverters(StringListConverter.class)
     private List<String> vehicles = null;
     @SerializedName("species")
     @Expose
+    @TypeConverters(StringListConverter.class)
     private List<String> species = null;
     @SerializedName("created")
     @Expose
@@ -55,23 +56,6 @@ public class Film {
     @SerializedName("url")
     @Expose
     private String url;
-
-    public Film(String title, Integer episodeId, String openingCrawl, String director, String producer, String releaseDate, List<String> characters, List<String> planets, List<String> starships, List<String> vehicles, List<String> species, String created, String edited, String url) {
-        this.title = title;
-        this.episodeId = episodeId;
-        this.openingCrawl = openingCrawl;
-        this.director = director;
-        this.producer = producer;
-        this.releaseDate = releaseDate;
-        this.characters = characters;
-        this.planets = planets;
-        this.starships = starships;
-        this.vehicles = vehicles;
-        this.species = species;
-        this.created = created;
-        this.edited = edited;
-        this.url = url;
-    }
 
     public String getTitle() {
         return title;

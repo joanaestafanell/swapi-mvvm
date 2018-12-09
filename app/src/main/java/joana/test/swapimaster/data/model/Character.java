@@ -3,15 +3,13 @@ package joana.test.swapimaster.data.model;
 import java.util.List;
 
 import android.arch.persistence.room.*;
-import android.databinding.BindingAdapter;
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import joana.test.swapimaster.util.StringListConverter;
 
 @Entity(tableName = "people_table", indices = {@Index("name")})
-public class Person {
+public class Character {
 
     @PrimaryKey
     @NonNull
@@ -195,4 +193,6 @@ public class Person {
     public void setUrl(String url) {
         this.url = url;
     }
+
+
 }

@@ -24,18 +24,17 @@ import android.support.annotation.Nullable;
 import android.support.annotation.WorkerThread;
 
 import joana.test.swapimaster.data.model.People;
-import joana.test.swapimaster.data.model.Person;
 import joana.test.swapimaster.util.Resource;
 import joana.test.swapimaster.util.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public abstract class NetworkBoundResource<ResultType, RequestType> {
+public abstract class NetworkBoundPaginationResource<ResultType, RequestType> {
     private final MediatorLiveData<Resource<ResultType>> result = new MediatorLiveData<>();
 
     @MainThread
-    NetworkBoundResource() {
+    NetworkBoundPaginationResource() {
         result.setValue(Resource.loading(null));
         LiveData<ResultType> dbSource = loadFromDb();
         result.addSource(dbSource, data -> {
