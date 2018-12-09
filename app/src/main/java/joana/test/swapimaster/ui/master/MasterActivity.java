@@ -171,4 +171,5 @@ public class MasterActivity extends AppCompatActivity {
         mProgressBar.setVisibility(View.VISIBLE);
     }
 
+
 }
