@@ -169,7 +169,5 @@ public class MasterActivity extends AppCompatActivity {
 
         mProgressBar = findViewById(R.id.progressBar);
         mProgressBar.setVisibility(View.VISIBLE);
-
-
     }
 }
